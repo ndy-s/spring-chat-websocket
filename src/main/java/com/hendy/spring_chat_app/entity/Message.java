@@ -30,6 +30,7 @@ public class Message {
     @Column(nullable = false)
     private String content;
 
+    @Builder.Default
     @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date timestamp = new Date();

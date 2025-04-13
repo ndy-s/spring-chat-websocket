@@ -33,10 +33,12 @@ public class Friend {
     @Column(nullable = false)
     private FriendshipStatus status;
 
+    @Builder.Default
     @Column(nullable = false, updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date createdAt = new Date();
 
+    @Builder.Default
     @Column(nullable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedAt = new Date();
